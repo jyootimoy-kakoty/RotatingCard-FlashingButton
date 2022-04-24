@@ -160,12 +160,12 @@ body {
 }
 
 #plans {
-    margin: 30px;
-    padding: 0px 15px 0px 15px;
+    margin: 30px 30px;
+    padding: 0px 0px 0px 0px;
     min-height: 50vh;
 }
 .card {  
-    margin-right: 4rem;
+    margin-right: 3.5rem;
     margin-bottom: 2rem;
     height: 20rem;
     width: 15rem; 
@@ -174,7 +174,7 @@ body {
     display: inline-block;
 }
 .card:nth-child(4n) {
-    margin-right: 0px;
+    /*margin-right: 0px;*/
 }
 .cardSide {
     height: 20rem;
