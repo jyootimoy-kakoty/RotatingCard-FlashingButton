@@ -164,9 +164,17 @@ body {
     padding: 0px 15px 0px 15px;
     min-height: 50vh;
 }
-.card {    
+.card {  
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    height: 20rem;
+    width: 15rem; 
     perspective: 150rem;
     position: relative;
+    display: inline-block;
+}
+.card:nth-child(4n) {
+    margin-right: 0px;
 }
 .cardSide {
     height: 20rem;
@@ -174,7 +182,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    /*box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;*/
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
     border-radius: 12px;
     transition: all .8s ease;
     backface-visibility: hidden;
@@ -193,6 +202,24 @@ body {
     text-align: center;
     font-size: small;
 }
+.card .back1 {
+    background-color: #159d7d;
+}
+.card .back2 {
+    background-color: #ffb900;
+}
+.card .back3 {
+    background-color: #5643fa;
+}
+.card .back4 {
+    background-color: #f65296;
+}
+.card .back5 {
+    background-color: #f67062;
+}
+.card .back6 {
+    background-color: #55657a;
+}
 .card:hover .frontSide {
     cursor: pointer;
     transform: rotateY(-180deg);
@@ -205,17 +232,37 @@ body {
     /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
     animation: moveUPButton 1.5s ease-out .75 normal backwards;
 }
-.cardHeader {
+.cardHeaderBackground {
     height: 40%;
     background-size: cover;
     background-position: center;
-    background-color: #fc5296;
-    background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%), url(https://www.outbackmarine.com.au/assets/full/ENE.EPL-125BT-12V.jpg);
+    /*background-color: #fc5296;*/
+    background-blend-mode: screen;
+    background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%), url(./lithiumBattery.jpg);
     border-radius: 12px 12px 0 0;
     position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+.card .front1 {
+    background-image: linear-gradient(315deg, #55c57a 0%, #28b485 74%), url(./lithiumBattery.jpg);
+}
+.card .front2 {
+    background-image: linear-gradient(315deg, #e5e52f 0%, #ffb900 74%), url(./lithiumBattery.jpg);
+}
+.card .front3 {
+    background-image: linear-gradient(315deg, #2998ff 0%, #5643fa 74%), url(./lithiumBattery.jpg);
+}
+.card .front4 {
+    background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%), url(./lithiumBattery.jpg);
+}
+.card .front5 {
+    background-image: linear-gradient(315deg, #ffb900 0%, #ff7730 74%), url(./lithiumBattery.jpg);
+}
+.card .front6 {
+    background-image: linear-gradient(315deg, #bac3cf 0%, #55657a 74%), url(./lithiumBattery.jpg);
 }
 .line1, .line2 {
-    margin: 15px;
+    margin: 15px 15px 15px 15px;
     padding: 0 5px;
     height: 25px;
     width: fit-content;
@@ -227,11 +274,11 @@ body {
     background-color: #E43B8A;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 60%;
 }
 .line1 {
     background-color: #E43B69;
-    bottom: 25px;
+    bottom: 65%;
 }
 .content {
     padding: 10px 15px;
